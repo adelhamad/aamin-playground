@@ -1,11 +1,108 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>aamin playground</title></head>
-<body style="font-family:system-ui;background:#0b0b0d;color:#e6e6e6;display:grid;place-items:center;height:100vh;margin:0">
-  <div style="text-align:center">
-    <h1 style="margin:0 0 .5rem">Hello aamin playground</h1>
-    <p style="opacity:.6;margin:0">built from this repo's own Dockerfile</p>
-    <p style="opacity:.35;margin:.75rem 0 0;font-family:ui-monospace,monospace">deployed by poll — v2</p>
-  </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Default build · aamin playground</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial Black, Impact, Haettenschweiler, sans-serif;
+      background: #ffd21c;
+      color: #171713;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      grid-template-rows: 26px 1fr;
+      background: #ffd21c;
+    }
+
+    .hazard {
+      background: repeating-linear-gradient(
+        -45deg,
+        #171713 0 18px,
+        #ffd21c 18px 36px
+      );
+      border-bottom: 3px solid #171713;
+    }
+
+    main {
+      width: min(1100px, 100%);
+      margin: auto;
+      padding: clamp(28px, 7vw, 84px);
+    }
+
+    .source {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: clamp(44px, 8vw, 88px);
+      font: 700 13px/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .source span {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(76px, 20vw, 240px);
+      font-weight: 900;
+      letter-spacing: -.085em;
+      line-height: .72;
+      text-transform: uppercase;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: 32px;
+      margin-top: clamp(48px, 9vw, 100px);
+      padding-top: 18px;
+      border-top: 3px solid #171713;
+    }
+
+    p {
+      max-width: 42ch;
+      margin: 0;
+      font: 600 clamp(16px, 2.2vw, 20px)/1.45 Arial, Helvetica, sans-serif;
+    }
+
+    code {
+      padding: 10px 13px;
+      background: #171713;
+      color: #ffd21c;
+      font: 700 13px/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
+
+    @media (max-width: 620px) {
+      .details { grid-template-columns: 1fr; align-items: start; }
+      code { justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hazard" aria-hidden="true"></div>
+  <main>
+    <div class="source"><span>01</span> Image source: Dockerfile</div>
+    <h1>Default</h1>
+    <div class="details">
+      <p>This yellow screen means the image was built from the repository’s primary Dockerfile.</p>
+      <code>Dockerfile</code>
+    </div>
+  </main>
 </body>
 </html>

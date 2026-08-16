@@ -20,6 +20,8 @@
       display: grid;
       place-items: center;
       padding: 24px;
+      border-top: 18px solid #12382e;
+      border-bottom: 18px solid #12382e;
       background:
         radial-gradient(circle at 10% 15%, #ff765e 0 7px, transparent 8px),
         radial-gradient(circle at 88% 82%, #ff765e 0 7px, transparent 8px),
@@ -101,15 +103,23 @@
       content: "";
       background: #ff5d45;
     }
+
+    .file-name {
+      display: block;
+      margin-top: 9px;
+      color: #12382e;
+      font: 700 13px/1.2 ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
   </style>
 </head>
 <body>
   <main>
-    <div class="eyebrow">production.Dockerfile</div>
-    <div class="mark" aria-hidden="true">P</div>
+    <div class="eyebrow">03 / production image</div>
+    <div class="mark" aria-hidden="true">03</div>
     <h1>Production build</h1>
-    <p>This is the steady image: a separate visual target for proving that the production Dockerfile was selected.</p>
+    <p>This green seal screen means the image was built from <strong>production.Dockerfile</strong>.</p>
     <div class="status">production variant</div>
+    <code class="file-name">production.Dockerfile</code>
   </main>
 </body>
 </html>

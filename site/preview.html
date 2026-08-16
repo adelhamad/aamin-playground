@@ -27,6 +27,16 @@
       background-size: 32px 32px;
     }
 
+    body::before {
+      position: fixed;
+      top: -.12em;
+      right: -.04em;
+      content: "02";
+      color: rgba(52, 65, 204, .14);
+      font: 900 min(52vw, 560px)/1 Inter, Avenir, "Segoe UI", sans-serif;
+      letter-spacing: -.1em;
+    }
+
     main {
       position: relative;
       width: min(720px, calc(100% - 32px));
@@ -90,9 +100,9 @@
 </head>
 <body>
   <main>
-    <div class="label">preview.Dockerfile</div>
+    <div class="label">02 / image source: preview.Dockerfile</div>
     <h1>Preview build</h1>
-    <p>You are looking at the experimental image. Changes can land here before they reach the production variant.</p>
+    <p>This blue blueprint screen means the image was built from <strong>preview.Dockerfile</strong>.</p>
     <div class="stamp" aria-label="Preview variant">safe to<br>experiment</div>
   </main>
 </body>
