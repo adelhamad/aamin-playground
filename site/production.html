@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Production build · aamin playground</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Georgia, "Times New Roman", serif;
+      background: #f1f0df;
+      color: #12382e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at 10% 15%, #ff765e 0 7px, transparent 8px),
+        radial-gradient(circle at 88% 82%, #ff765e 0 7px, transparent 8px),
+        #f1f0df;
+    }
+
+    main {
+      width: min(760px, 100%);
+      padding: clamp(32px, 7vw, 76px);
+      border: 1px solid #12382e;
+      outline: 7px double #12382e;
+      outline-offset: 8px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 40px;
+      font: 700 11px/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after {
+      height: 1px;
+      flex: 1;
+      content: "";
+      background: currentColor;
+    }
+
+    .mark {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 26px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #12382e;
+      color: #d6ef55;
+      font: 700 30px/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(54px, 11vw, 104px);
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: .88;
+    }
+
+    p {
+      max-width: 43ch;
+      margin: 30px auto 0;
+      font-family: Inter, Avenir, "Segoe UI", sans-serif;
+      font-size: clamp(16px, 2.3vw, 19px);
+      line-height: 1.55;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 34px;
+      padding: 9px 12px;
+      border: 1px solid #12382e;
+      font: 700 11px/1 ui-monospace, "SFMono-Regular", Consolas, monospace;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .status::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      content: "";
+      background: #ff5d45;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">production.Dockerfile</div>
+    <div class="mark" aria-hidden="true">P</div>
+    <h1>Production build</h1>
+    <p>This is the steady image: a separate visual target for proving that the production Dockerfile was selected.</p>
+    <div class="status">production variant</div>
+  </main>
+</body>
+</html>
