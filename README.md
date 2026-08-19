@@ -23,5 +23,3 @@ Run any variant on port 8080, for example:
 ```sh
 docker run --rm -p 8080:80 aamin-playground:preview
 ```
-
-Nothing here is production. Delete freely.
